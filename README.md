@@ -6,52 +6,36 @@ PC
 Anaconda - Python 3.7
 ## ALGORITHM: 
 ### Step 1:
-Get the file name to create user.
+Import sys
 
-### Step 2: 
- Give a new file name to create a copy of a file content.
+### Step 2:
+Then decleare count is equal to 0
 
-### Step 3: 
-Read the file and close the file.
+### Step 3:
+Read the file with python file name
 
-### Step 4:  
-Now the content in the new file.
+### Step 4:
+Splitting the word
 
-### Step 5: 
-When done print"File Copied Successfully".
+### Step 5:
+After splitting count the number of words in the line
 
-### Step 6: 
-End the program
+### Step 6:
+In last statement give the print statement
 ## PROGRAM:
 ```
 '''
 #Program to copy the file.
 #Developed by:DHARANYA.N
 #RegisterNumber:212223230044
-'''
-print("Enter the name of source file: ")
 
-sFile=input()
-
-print("Enter the name of target file: ")
-
-tFile=input()
-
-fileHandle=open(sFile,"r")
-
-texts=fileHandle.readlines()
-
-fileHandle.close()
-
-fileHandle=open(tFile, "w")
-
-for s in texts:
-
-    fileHandle.write(s)
-
-fileHandle.close()
-
-print("\nFile Copied Successfully!")
+import sys
+count=0
+with open("text.txt",'r') as f:
+    for line in f:
+         word=line.split()
+         count+=len(word)
+print("Word Count in File=",count)
 ```
 
 ### OUTPUT:
